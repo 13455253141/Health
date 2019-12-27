@@ -1,0 +1,8 @@
+程序开发软件：Pycharm 数据库：mysql
+采用技术： Django(一个MVT框架，类似Java的SSM框架)
+Python版本：3.7.4
+django版本：3.0.1
+  人生苦短，我用Python，咱们今天就来分享一个用Python语言开发的基于Django框架的图书管理系统吧。项目前台和后台界面模板都是自己编写，前台采用Bootstrap框架UI,后台EasyUI框架UI
+
+
+

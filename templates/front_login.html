@@ -1,0 +1,108 @@
+{% load static  %}
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6 lt8"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7 lt8"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8 lt8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="UTF-8" />
+        <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">  -->
+        <title>预防协助康复系统登录</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Login and Registration Form with HTML5 and CSS3" />
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="stylesheet" type="text/css" href="{%  static 'easyui/themes/default/easyui.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{%  static 'easyui/themes/icon.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{%  static 'css/frontlogin/demo.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{%  static 'css/frontlogin/style.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{%  static 'css/frontlogin/animate-custom.css' %}" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>预防协助康复系统</h1>
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <!-- hidden anchor to stop jump http://www.css3create.com/Astuce-Empecher-le-scroll-avec-l-utilisation-de-target#wrap4  -->
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  action="" autocomplete="on">
+                                <h1>登录</h1>
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" > 用户名 </label>
+                                    <input id="username" name="username"  type="textbox" placeholder="用户名"/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p"> 密码 </label>
+                                    <input id="password" name="password"  type="password" placeholder="密码" />
+                                </p>
+                                <p>
+                                    <label for="role" class="uname" data-icon="r"> 角色 </label>
+                                    <select name="identify" id="identify" style="width: 100px;height: 30px;">
+                                        <option value="admin">管理员</option>
+                                        <option value="doctor">医生</option>
+                                        <option value="sickpeople">病人</option>
+                                    </select>
+                                </p>
+                                <p class="keeplogin"> 
+									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+									<label for="loginkeeping">记住账号</label>
+								</p>
+                                <p class="login button"> 
+                                    <input type="submit" id="loginBtn" value="登录" />
+{#                                    <a href="#" class="easyui-linkbutton">登录</a>#}
+								</p>
+                                <p class="change_link">
+									还没账号 ?
+									<a href="#toregister" class="to_register">注册</a>
+								</p>
+                            </form>
+                        </div>
+
+                        <div id="register" class="animate form">
+                            <form  action="" autocomplete="on">
+                                <h1> 注册 </h1>
+                                <p> 
+                                    <label for="usernamesignup" class="uname" data-icon="u">账号</label>
+                                    <input id="usernamesignup" name="usernamesignup" required="required" type="text" placeholder="账号" />
+                                </p>
+                                <p> 
+                                    <label for="emailsignup" class="youmail" data-icon="e" > 姓名 </label>
+                                    <input id="emailsignup" name="emailsignup" required="required" type="email" placeholder="姓名"/>
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup" class="youpasswd" data-icon="p">密码 </label>
+                                    <input id="passwordsignup" name="passwordsignup" required="required" type="password" placeholder="密码"/>
+                                </p>
+                                <p> 
+                                    <label for="passwordsignup_confirm" class="youpasswd" data-icon="p">确认密码 </label>
+                                    <input id="passwordsignup_confirm" name="passwordsignup_confirm" required="required" type="password" placeholder="密码"/>
+                                </p>
+                                <p class="signin button"> 
+									<input type="submit" value="注册"/>
+								</p>
+                                <p class="change_link">  
+									已经有了账号 ?
+									<a href="#tologin" class="to_register"> 跳转到登录 </a>
+								</p>
+                            </form>
+                        </div>
+						
+                    </div>
+                </div>  
+            </section>
+        </div>
+
+    <script type="text/javascript" src="{%  static 'easyui/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{%  static 'easyui/jquery.easyui.min.js' %}"></script>
+    <script type="text/javascript" src="{%  static 'easyui/locale/easyui-lang-zh_CN.js' %}" ></script>
+    <script type="text/javascript" src="{%  static 'easyui/jquery.cookie.js' %}"></script>
+    <script type="text/javascript" src="{%  static 'js/frontLogin.js' %}"></script>
+    </body>
+</html>
